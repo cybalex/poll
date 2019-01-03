@@ -1,9 +1,9 @@
 export default class myClass {
-    question: string;
-    answer: string;
+  question: string
+  answer: string
 
-    constructor() {
-        this.answer = '';
-        this.question = '';
-    }
+  constructor() {
+    this.answer = ''
+    this.question = ''
+  }
 }
