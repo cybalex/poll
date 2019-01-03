@@ -6,8 +6,8 @@
 
 import { createStackNavigator, createAppContainer } from 'react-navigation'
 
-import { Home } from '@/views/Home'
-import { CreatePoll } from '@/views/CreatePoll'
+import Home from '@/screens/Home'
+import CreatePoll from '@/screens/CreatePoll'
 
 const AppNavigator = createStackNavigator(
   {

@@ -7,9 +7,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { StyleSheet, Text, View, Alert, TouchableOpacity } from 'react-native'
+import { Text, View, Alert, TouchableOpacity } from 'react-native'
 
-export class Menu extends React.Component {
+import styles from './styles'
+
+export default class Menu extends React.Component {
   static propTypes = {
     navigate: PropTypes.func,
   }
@@ -51,26 +53,3 @@ export class Menu extends React.Component {
     )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 2,
-    backgroundColor: '#35605a',
-  },
-
-  buttonStyle: {
-    flex: 1,
-    backgroundColor: '#35605a',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderColor: '#ffffff',
-    borderBottomWidth: 1,
-  },
-
-  buttonText: {
-    color: '#ffffff',
-    fontSize: 18,
-    paddingTop: 10,
-    paddingBottom: 10,
-  },
-})

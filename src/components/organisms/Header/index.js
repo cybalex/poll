@@ -7,15 +7,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { StyleSheet, Text, View, Platform } from 'react-native'
+import { Text, View } from 'react-native'
 
-export class Header extends React.Component {
+import styles from './styles'
+
+export default class Header extends React.Component {
   static propTypes = {
     message: PropTypes.string,
   }
 
   constructor(props) {
     super(props)
+
     this.state = { isLoggedIn: false }
   }
 
@@ -37,18 +40,3 @@ export class Header extends React.Component {
     )
   }
 }
-
-const styles = StyleSheet.create({
-  headText: {
-    color: '#ffffff',
-    textAlign: 'right',
-    fontSize: 20,
-  },
-
-  headerStyle: {
-    flex: 1,
-    paddingTop: 30,
-    paddingRight: 10,
-    backgroundColor: Platform.OS === 'android' ? '#35605a' : '#999999',
-  },
-})

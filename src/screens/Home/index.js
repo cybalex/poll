@@ -6,11 +6,15 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import { StyleSheet, Text, View, ImageBackground } from 'react-native'
-import { Header } from '@/sections/Header'
-import { Menu } from '@/sections/Menu'
 
-export class Home extends React.Component {
+import { Text, View, ImageBackground } from 'react-native'
+
+import Header from '@/components/organisms/Header'
+import Menu from '@/components/organisms/Menu'
+
+import styles from './styles'
+
+export default class Home extends React.Component {
   static propTypes = {
     navigation: PropTypes.object,
   }
@@ -39,14 +43,3 @@ export class Home extends React.Component {
     )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-
-  bgImageStyle: {
-    width: '100%',
-    height: '100%',
-  },
-})
