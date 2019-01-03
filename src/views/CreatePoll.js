@@ -13,16 +13,13 @@ import {
   StyleSheet,
   Text,
   View,
-  Alert,
   TextInput,
   TouchableOpacity,
   UIManager,
 } from 'react-native'
-import I18n from 'react-native-i18n'
-import { Header } from '../sections/Header'
-import Question from '../model/Question'
-import { Localization } from 'expo-localization'
-import { Translations } from '../translations/Translations'
+import { Header } from '@/sections/Header'
+import Question from '@/model/Question'
+import i18n from 'i18n-js'
 
 const { State: TextInputState } = TextInput
 
@@ -56,7 +53,6 @@ export class CreatePoll extends React.Component {
   clearFields = () => this.setState({ question: '', answer: '' })
 
   saveQuestion = () => {
-    Alert.alert(Localization.locale)
     // Alert.alert(
     //     'question should be stored in db',
     //     this.state.question + ' - ' + this.state.answer
@@ -78,7 +74,7 @@ export class CreatePoll extends React.Component {
             justifyContent: 'space-between',
           }}
         >
-          <Header message={I18n.t('Login')} />
+          <Header message={i18n.t('Login')} />
         </ScrollView>
 
         <ScrollView
@@ -106,7 +102,7 @@ export class CreatePoll extends React.Component {
               onChangeText={text => this.setState({ question: text })}
               value={this.state.question}
               autoCapitalize="none"
-              placeholder={I18n.t('Type a question')}
+              placeholder={i18n.t('Type a question')}
               placeholderTextColor="#888888"
               underlineColorAndroid="transparent"
               multiline
@@ -186,22 +182,6 @@ export class CreatePoll extends React.Component {
     }).start()
   }
 }
-
-I18n.fallbacks = true
-I18n.locale = Localization.locale
-
-I18n.translations = Translations.localization
-//{
-
-// en: {
-//     Question: 'Question!',
-//     'Type a question': 'Ask a question',
-// },
-// de: {
-//     Question: 'Die Frage',
-//     'Type a question': 'Eine frage stellen',
-// }
-// };
 
 const styles = StyleSheet.create({
   container: {

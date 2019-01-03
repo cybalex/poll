@@ -7,8 +7,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StyleSheet, Text, View, ImageBackground } from 'react-native'
-import { Header } from '../sections/Header'
-import { Menu } from '../sections/Menu'
+import { Header } from '@/sections/Header'
+import { Menu } from '@/sections/Menu'
 
 export class Home extends React.Component {
   static propTypes = {
@@ -26,7 +26,7 @@ export class Home extends React.Component {
       <View style={styles.container}>
         <ImageBackground
           style={styles.bgImageStyle}
-          source={require('../../assets/images/dog.jpg')}
+          source={require('assets/images/dog.jpg')}
         >
           <Header message="Press to login" />
           <Text style={{ flex: 10, color: '#ffffff' }}>
